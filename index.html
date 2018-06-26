@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<body>
+  <div id="box">
+  </div>
+
+  <script>
+let boxTop = 200;
+let boxLeft = 200;
+      'use strict';
+      
+      document.addEventListener('keydown', (event) => {
+        const keyName = event.key;
+        console.log('keydown event\n\n' + 'key: ' + keyName);
+
+        if(keyName === "ArrowDown") {
+          boxTop += 10
+          console.log (boxTop)
+          document.getElementById("box").style.top = boxTop + "px";
+        }
+
+        if(keyName === "ArrowUp") {
+          boxTop -=10
+          console.log (boxTop)
+        }
+        
+        if(keyName === "ArrowLeft") {
+          boxLeft -=10
+          console.log (boxLeft)
+          
+        }
+        
+        if(keyName === "ArrowRight") {
+          boxLeft +=10
+          console.log (boxLeft)
+        }
+        
+        document.getElementById("box").style.left = boxLeft + "px";
+        document.getElementById("box").style.top = boxTop + "px";
+
+      });
+      
+      
+             
+           
+      
+      </script>
+</body>
+</html>
